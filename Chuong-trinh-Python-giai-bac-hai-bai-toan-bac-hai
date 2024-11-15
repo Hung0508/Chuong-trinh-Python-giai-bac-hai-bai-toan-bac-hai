@@ -1,0 +1,29 @@
+import math
+
+print("Giải phương trình bậc 2: ax^2 + bx + c = 0")
+a= float(input("nhap a: "))
+b= float(input("nhap b: "))
+c= float(input("nhap c: "))
+if a==0:
+   if b == 0:
+        if c == 0:
+            print("Phương trình vô số nghiệm!")
+        else:
+            print("Phương trình vô nghiệm!")
+   else:
+        if c == 0:
+            print("Phương trình có 1 nghiệm x = 0")
+        else:
+            x= -c / b
+            print(f"Phương trình có 1 nghiệm x = {x}")
+else:
+    dt= b**2-4*a*c
+    if dt < 0:
+      print("phuong trinh vo nghiem")
+    elif dt == 0 :
+      x= -(b/2*a)
+      print(f"phuong trinh co nghiem kep: x1=x2= {x}")
+    else:
+      x1= float(((-b - math.sqrt(dt))/(2*a)))
+      x2= float(((-b + math.sqrt(dt))/(2*a)))
+      print(f"Phuong trinh co hai nghiem phan biet: x1 = {x1}, x2= {x2}")
